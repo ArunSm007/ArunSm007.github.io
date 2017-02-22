@@ -1,0 +1,254 @@
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript">
+		function typeChange(str){
+			var s3=document.getElementById("s3");
+	
+		}
+
+		function clearOptions(s2){
+			for(var i=0;s2.options.length!=0;){
+				s2.remove(i);
+			}
+		}
+
+		function modify(str){
+			var s2=document.getElementById("s2");
+			
+			var opt=document.createElement("OPTION");
+			clearOptions(s2);
+			var x;
+			if(str=="Faculty"){
+
+				x=opt.cloneNode(false);
+				x.value=x.innerHTML="FacultyId";
+				s2.appendChild(x);
+
+				x=opt.cloneNode(false);
+				x.value=x.innerHTML="Name";
+				s2.appendChild(x);
+
+				x=opt.cloneNode(false);
+				x.value=x.innerHTML="Gender";
+				s2.appendChild(x);
+
+				x=opt.cloneNode(false);
+				x.value=x.innerHTML="BloodGroup";
+				s2.appendChild(x);
+
+				x=opt.cloneNode(false);
+				x.value=x.innerHTML="DateOfBirth";
+				s2.appendChild(x);
+
+				x=opt.cloneNode(false);
+				x.value=x.innerHTML="DateOfJoining";
+				s2.appendChild(x);
+
+				x=opt.cloneNode(false);
+				x.value=x.innerHTML="DateOfReleiving";
+				s2.appendChild(x);
+
+				x=opt.cloneNode(false);
+				x.value=x.innerHTML="PhoneNumber";
+				s2.appendChild(x);
+
+				x=opt.cloneNode(false);
+				x.value=x.innerHTML="MailId";
+				s2.appendChild(x);
+
+				x=opt.cloneNode(false);
+				x.value=x.innerHTML="Qualification";
+				s2.appendChild(x);
+
+				x=opt.cloneNode(false);
+				x.value=x.innerHTML="State";
+				s2.appendChild(x);
+
+				x=opt.cloneNode(false);
+				x.value=x.innerHTML="District";
+				s2.appendChild(x);
+
+				x=opt.cloneNode(false);
+				x.value=x.innerHTML="AreaOfInterest";
+				s2.appendChild(x);
+
+				x=opt.cloneNode(false);
+				x.value=x.innerHTML="Experience";
+				s2.appendChild(x);
+
+				typeChange("FacultyId");
+			}
+
+			else if(str=="Conferences" || str=="Journals"){
+
+				x=opt.cloneNode(false);
+				x.value=x.innerHTML="Title";
+				s2.appendChild(x);
+
+				x=opt.cloneNode(false);
+				x.value=x.innerHTML="Author";
+				s2.appendChild(x);
+
+				x=opt.cloneNode(false);
+				x.value=x.innerHTML="ISSN";
+				s2.appendChild(x);
+
+				x=opt.cloneNode(false);
+				x.value=x.innerHTML="IFNumber";
+				s2.appendChild(x);
+
+				x=opt.cloneNode(false);
+				x.value=x.innerHTML="SJR";
+				s2.appendChild(x);
+
+				x=opt.cloneNode(false);
+				x.value=x.innerHTML="SNIP";
+				s2.appendChild(x);
+
+				x=opt.cloneNode(false);
+				x.value=x.innerHTML="HINDEX";
+				s2.appendChild(x);
+
+				x=opt.cloneNode(false);
+				x.value=x.innerHTML="KINDEX";
+				s2.appendChild(x);
+
+				x=opt.cloneNode(false);
+				x.value=x.innerHTML="Region";
+				s2.appendChild(x);
+
+				typeChange("FacultyId");
+			}
+
+			else if(str=="Memberships"){
+
+				x=opt.cloneNode(false);
+				x.value=x.innerHTML="ID";
+				s2.appendChild(x);
+
+				x=opt.cloneNode(false);
+				x.value=x.innerHTML="Organization";
+				s2.appendChild(x);
+
+				typeChange("ID");
+			}
+
+			else if(str=="Monographs"){
+
+				x=opt.cloneNode(false);
+				x.value=x.innerHTML="Title";
+				s2.appendChild(x);
+
+				x=opt.cloneNode(false);
+				x.value=x.innerHTML="Author";
+				s2.appendChild(x);
+
+				typeChange("Title");
+			}
+
+			else if(str=="OrganizedPrograms"){
+
+				x=opt.cloneNode(false);
+				x.value=x.innerHTML="ProgramName";
+				s2.appendChild(x);
+
+				x=opt.cloneNode(false);
+				x.value=x.innerHTML="SponsoredBy";
+				s2.appendChild(x);
+
+				x=opt.cloneNode(false);
+				x.value=x.innerHTML="Duration";
+				s2.appendChild(x);
+
+				typeChange("ProgramName");
+			}
+
+			else if(str=="Responsibilities"){
+
+				x=opt.cloneNode(false);
+				x.value=x.innerHTML="WorkDetails";
+				s2.appendChild(x);
+
+				x=opt.cloneNode(false);
+				x.value=x.innerHTML="AllotedBy";
+				s2.appendChild(x);
+
+				x=opt.cloneNode(false);
+				x.value=x.innerHTML="Duration";
+				s2.appendChild(x);
+
+				typeChange("WorkDetails");
+			}
+
+			else if(str=="Seminars" || str=="Workshops"){
+
+				x=opt.cloneNode(false);
+				x.value=x.innerHTML="Name";
+				s2.appendChild(x);
+
+				x=opt.cloneNode(false);
+				x.value=x.innerHTML="OrganizedBy";
+				s2.appendChild(x);
+
+				x=opt.cloneNode(false);
+				x.value=x.innerHTML="Duration";
+				s2.appendChild(x);
+
+				typeChange("Name");
+			}
+
+		}
+	</script>
+	<style type="text/css">
+		div{
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<form class="form col-xs-12 col-md-12">
+			<div class="form-group col-xs-4 col-md-4">
+				<label for="s1" class="col-xs-3 col-md-3">Search</label>
+				
+					<select id="s1" class="form-control" onchange="modify(this.value)">
+						<option disabled selected></option>
+						<option value="Faculty">Faculty</option>
+						<option value="Conferences">Conferences</option>
+						<option value="Journals">Journals</option>
+						<option value="Memberships">Memberships</option>
+						<option value="Monographs">Monographs</option>
+						<option value="OrganizedPrograms">Organized Programs</option>
+						<option value="Responsibilities">Responsibilities</option>
+						<option value="Seminars">Seminars</option>
+						<option value="Workshops">Workshops</option>
+					</select>
+				
+				
+			</div>
+			<div class="form-group col-xs-4 col-md-4">
+				<label for="s2" class="col-xs-3 col-md-3">By</label>
+				
+					<select id="s2" class="form-control" onchange="typeChange(this.value)">
+						
+					</select>
+				
+			</div>
+			<div class="form-group col-xs-4 col-md-4">
+				<label for="s3" class="col-xs-3 col-md-3">like</label>
+				
+					<input id="s3" class="form-control"/>
+				
+			</div>
+			<div class="text-center">
+			<button class="btn btn-primary">Search <span class="glyphicon glyphicon-search"></span></button>
+			</div>
+		</form>
+
+	</div>
+</body>
+</html>
